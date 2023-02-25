@@ -1,8 +1,11 @@
 package entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import java.sql.Date;
 
 @Entity
 public class Item {
@@ -12,6 +15,9 @@ public class Item {
     private double price;
     @Transient
     private int qty;
+
+    @CreationTimestamp
+    private Date date;
 
     public Item() {
     }

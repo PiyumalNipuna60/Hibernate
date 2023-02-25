@@ -14,12 +14,15 @@ public class AppInitializer {
         Session session = FactoryConfigeration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
-//        session.save(item);
+        session.save(item);
 
 //        session.update(item);
 
-        Item i1 = session.get(Item.class, "I001");
-        System.out.println(i1);
+//        Item i1 = session.get(Item.class, "I001");
+//        System.out.println(i1);
+
+//        Item i001 = session.get(Item.class, "I001");
+//        session.delete(i001);
 
         transaction.commit();
         session.close();
