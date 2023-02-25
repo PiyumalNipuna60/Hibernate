@@ -8,13 +8,30 @@ public class AppInitializer {
         Customer customer = new Customer();
         customer.setId("C001");
         customer.setName("kamal");
-        customer.setAddress("Galle");
+        customer.setAddress("matara");
         customer.setSalary(25000.00);
+
+        Customer customer2 = new Customer();
+        customer2.setId("C002");
+        customer2.setName("sadun");
+        customer2.setAddress("Galle");
+        customer2.setSalary(25000.00);
+
 
         Session session = FactoryConfigeration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
-        session.save(customer);
+
+        /*save*/
+//        session.save(customer);
+//        session.save(customer2);
+
+        /*Update*/
+        session.update(customer);
+
+
+
+
         transaction.commit();
 
         session.close();

@@ -1,5 +1,6 @@
 package lk.ijse.hibernate.enitity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -7,6 +8,7 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     private String id;
+
     private String name;
     private String address;
     private double salary;
