@@ -5,7 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 public class Item {
@@ -13,7 +13,7 @@ public class Item {
     private String code;
     private String description;
     private double price;
-    @Transient
+//    @Transient
     private int qty;
 
     @CreationTimestamp

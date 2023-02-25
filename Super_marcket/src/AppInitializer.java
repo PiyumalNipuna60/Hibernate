@@ -6,7 +6,7 @@ import util.FactoryConfigeration;
 public class AppInitializer {
     public static void main(String[] args) {
         Item item = new Item();
-        item.setCode("I001");
+        item.setCode("I002");
         item.setDescription("Biscut");
         item.setPrice(2500);
         item.setQty(25);
