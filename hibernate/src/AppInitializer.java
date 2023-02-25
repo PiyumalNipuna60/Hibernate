@@ -30,8 +30,13 @@ public class AppInitializer {
 //        session.update(customer);
 
         /*get Customer*/
-        Customer c001 = session.get(Customer.class, "C001");
-        System.out.println(c001);
+//        Customer c001 = session.get(Customer.class, "C001");
+//        System.out.println(c001);
+
+        /*Delete*/
+        Customer c1 = new Customer();
+        c1.setId("C001");
+        session.delete(c1);
 
 
         transaction.commit();
