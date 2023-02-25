@@ -2,6 +2,7 @@ package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Item {
@@ -9,6 +10,7 @@ public class Item {
     private String code;
     private String description;
     private double price;
+    @Transient
     private int qty;
 
     public Item() {
