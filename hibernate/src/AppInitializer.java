@@ -27,9 +27,11 @@ public class AppInitializer {
 //        session.save(customer2);
 
         /*Update*/
-        session.update(customer);
+//        session.update(customer);
 
-
+        /*get Customer*/
+        Customer c001 = session.get(Customer.class, "C001");
+        System.out.println(c001);
 
 
         transaction.commit();
