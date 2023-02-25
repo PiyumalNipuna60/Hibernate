@@ -1,16 +1,23 @@
 package entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+import sun.util.calendar.LocalGregorianCalendar;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import java.sql.Date;
 
 @Entity
 public class Customer {
     @Id
     private String id;
-
     private String name;
     private String address;
     private double salary;
+
+    @CreationTimestamp
+    Date date;
 
     public Customer() {
     }

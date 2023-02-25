@@ -1,3 +1,4 @@
+import entity.Customer;
 import entity.Item;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -11,10 +12,21 @@ public class AppInitializer {
         item.setPrice(2500);
         item.setQty(25);
 
+        //------------------
+
+        Customer c1 = new Customer();
+        c1.setId("C002");
+        c1.setName("kamal");
+        c1.setAddress("Galle");
+        c1.setSalary(25000);
+
+
         Session session = FactoryConfigeration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
-        session.save(item);
+       session.save(c1);
+
+        //session.save(item);
 
 //        session.update(item);
 
