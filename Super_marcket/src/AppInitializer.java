@@ -1,3 +1,4 @@
+import embeded.Name;
 import entity.Customer;
 import entity.Item;
 import org.hibernate.Session;
@@ -14,17 +15,33 @@ public class AppInitializer {
 
         //------------------
 
-        Customer c1 = new Customer();
-        c1.setId("C002");
-        c1.setName("kamal");
-        c1.setAddress("Galle");
-        c1.setSalary(25000);
+//        Customer c1 = new Customer();
+//        c1.setId("C002");
+//        c1.setName("kamal");
+//        c1.setAddress("Galle");
+//        c1.setSalary(25000);
+
+        //------------------
+
+        Name name = new Name();
+        name.setfName("Imaduwa");
+        name.setsName("Nipuna");
+        name.setlName("Piyumal");
+
+        Customer c2 = new Customer();
+        c2.setId("C002");
+        c2.setName(name);
+        c2.setAddress("Galle");
+        c2.setSalary(25000);
 
 
         Session session = FactoryConfigeration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
-       session.save(c1);
+
+        session.save(c2);
+
+         //session.save(c1);
 
         //session.save(item);
 
