@@ -1,8 +1,6 @@
 package lk.ijse.hibernate.util;
 
-import lk.ijse.hibernate.enitity.Customer;
-import lk.ijse.hibernate.enitity.Laptop;
-import lk.ijse.hibernate.enitity.Student;
+import lk.ijse.hibernate.enitity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,7 +13,9 @@ public class FactoryConfigeration {
         Configuration configuration = new Configuration().configure()
                 .addAnnotatedClass(Customer.class)
                 .addAnnotatedClass(Student.class)
-                .addAnnotatedClass(Laptop.class);
+                .addAnnotatedClass(Laptop.class)
+                .addAnnotatedClass(Owner.class)
+                .addAnnotatedClass(Pet.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 
