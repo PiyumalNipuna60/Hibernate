@@ -1,46 +1,27 @@
 import lk.ijse.hibernate.enitity.Customer;
+import lk.ijse.hibernate.enitity.Laptop;
+import lk.ijse.hibernate.enitity.Student;
 import lk.ijse.hibernate.util.FactoryConfigeration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class AppInitializer {
     public static void main(String[] args) {
-        Customer customer = new Customer();
-        customer.setId("C001");
-        customer.setName("kamal");
-        customer.setAddress("matara");
-        customer.setSalary(25000.00);
+        Student s1 = new Student();
+        s1.setsId("S001");
+        s1.setName("Nipuna");
 
-        Customer customer2 = new Customer();
-        customer2.setId("C002");
-        customer2.setName("sadun");
-        customer2.setAddress("Galle");
-        customer2.setSalary(25000.00);
+        Laptop l1 = new Laptop();
+        l1.setlId("L001");
+        l1.setBrand("Dell");
+        l1.setStudent(s1);
 
 
         Session session = FactoryConfigeration.getInstance().getSession();
-
         Transaction transaction = session.beginTransaction();
 
-        /*save*/
-//        session.save(customer);
-//        session.save(customer2);
-
-        /*Update*/
-//        session.update(customer);
-
-        /*get Customer*/
-//        Customer c001 = session.get(Customer.class, "C001");
-//        System.out.println(c001);
-
-        /*Delete*/
-//        Customer c1 = new Customer();
-//        c1.setId("C001");
-//        session.delete(c1);
-
-        /*Delete -- option 2*/
-        Customer c2 = session.get(Customer.class, "C002");
-        session.delete(c2);
+        session.save(s1);
+        session.save(l1);
 
 
         transaction.commit();
