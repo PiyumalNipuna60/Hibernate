@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hibernate.iml" filepath="$PROJECT_DIR$/.idea/Hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Super_marcket/Super_marcket.iml" filepath="$PROJECT_DIR$/Super_marcket/Super_marcket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/hibernate/hibernate.iml" />
+    </modules>
+  </component>
+</project>
