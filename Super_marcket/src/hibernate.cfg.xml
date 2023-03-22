@@ -5,10 +5,10 @@
 <hibernate-configuration>
   <session-factory>
     <!--load jdbc connector for the configuration-->
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
     <!--will create a new database if not exists or use already having database-->
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernateSuperMarket?createDatabaseIfNotExist=true</property>
+    <property name="hibernate.connection.url">jdbc:mysql://root@localhost:3306/hibernateSuperMarket?createDatabaseIfNotExist=true</property>
 
     <!--your database username-->
     <property name="hibernate.connection.username">root</property>
